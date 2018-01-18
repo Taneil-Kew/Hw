@@ -1,0 +1,87 @@
+import sys
+def test(dp):
+    """  Print the result of a test.  """
+    linenum = sys._getframe(1).f_lineno   # Get the caller's line number.
+    if dp:
+        msg = "Test at line {0} ok.".format(linenum)
+    else:
+        msg = ("Test at line {0} FAILED.".format(linenum))
+    print(msg)
+def test_suite():
+    test(sum_to_even(mylist)==10)
+    test(bi(bilist)== 1)
+    print("nis_prime")
+    test(is_prime(11) == "prime")
+    test(is_prime(12) == "composite")
+    test(is_prime(10) == "composite")
+    test(is_prime(109) == "prime")
+bilist = {"derek", "deez"}
+mylist = {3, 7, 2, 11, 12}
+listletters = {"hello", "my", "name"}
+otherlist = {0, -2, -4, 7, 9, -1}
+def countodd(numlist):
+    count = 0
+    for i in numlist:
+        if i%2 != 0:
+            count = count+1
+    return count
+def sumeven(numlist):
+    sum = 0
+    for i in numlist:
+        if i%2 == 0:
+            sum = sum + i
+    return sum
+def sumneg(numlist):
+    negsum = 0
+    for i in numlist:
+        if i<1:
+            negsum =  negsum+i
+    return negsum
+def fiveletters(letterlist):
+    w= 0
+    for i in letterlist:
+        if len(i) == 5:
+            words = words+1
+    return words
+def sumtoeven(nlist):
+    sum = 0
+    for i in nlist:
+        if i % 2 == 0:
+            break
+        else:
+            sum+=i
+        return sum
+def bi(namelist):
+    count = 0
+    for i in namelist:
+        if i == "bi":
+            count = count+1
+            break
+        count = count+1
+    return count
+def newtsqrt(n):
+    approx = n/2
+    while True:
+        better = (approx + n/approx)/2
+        if abs(better - approx) < .001:
+            return better
+        approx = better
+def isprime(n):
+    for i in range(2,n):
+        if n%i == 0:
+            return "composite"
+        else:
+            return "prime"
+import turtle
+wn = turtle.Screen()
+s = turtle.Turtle()
+pirate = [(160, 20), (-43, 10), (270, 8), (-43, 12)]
+for (a, m) in pirate:
+    s.left(360-a)
+    s. forward(m)
+xX_house_Xx = [(90,100), (330, 100), (240,100), (240,100), (135,140.2), (135,100), (135,140.2), (135,100)]   
+
+for (a, m) in xX_house_Xx:
+    s.left(a)
+    s.forward(m)
+test_suite() 
